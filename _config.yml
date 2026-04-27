@@ -22,8 +22,8 @@ title: Huyen Vi
 email: huyentrang060996@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Về những câu chuyện tôi lượm nhặt quanh tôi
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/huyenvi.github.io"
+url: "https://huyentrang060996-glitch.github.io"
 twitter_username: jekyllrb
 github_username:  jekyll
 
