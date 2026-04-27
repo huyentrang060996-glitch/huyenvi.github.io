@@ -24,8 +24,7 @@ What VS Code does for your blog
 •	It lets you organise all your files in one place
 •	It has a built-in Terminal so you can run commands without switching apps
 
-How VS Code connects to your website
-VS Code itself does NOT connect directly to your website. Think of it like this:
+How VS Code connects to your website: VS Code itself does NOT connect directly to your website. Think of it like this:
 
 The simple chain:
 VS Code (you edit files here) → Terminal (you run 3 commands) → GitHub (receives your files) → huyenvi.blog (the world sees it)
@@ -58,32 +57,15 @@ Every time you want your changes to go live, you run these 3 commands in Termina
 "Send the package to GitHub" — this uploads everything and your live website updates in 2 minutes
 
 
-Part 4: Your Blog Folder — What Every File Does
-
-When you open VS Code and see the MY-BLOG folder on the left side, here is what every folder and file means:
-
-Folder / File	What it does
-_posts/	This is where ALL your blog posts live. Every time you write something new, you create a new file here. This is the folder you will use most often.
-_layouts/	This contains the HTML skeleton of your pages. The file default.html controls what appears on every single page — the header, navigation, and overall structure.
-_includes/	This contains small reusable pieces of HTML (like a header or footer) that you can insert into multiple pages. You will rarely need to touch this.
-assets/css/	This is where your design lives. The file style.css controls all the visual things — colours, fonts, spacing, and layout of your entire site.
-_config.yml	This is the master settings file for your whole site. It contains your site title, email, website URL, and other global settings. After editing this file, you must restart the server.
-index.markdown	This is your homepage — what people see first when they visit huyenvi.blog. You can edit this to change your intro text and what appears on the home page.
-about.markdown	This is your About page. Write about yourself, your story, and what your blog is about.
-now.markdown	This is your Now page (like Steph Ango's). Tell readers what you are currently reading, watching, doing.
-Gemfile	This is a list of software packages your blog needs to run. You will almost never need to edit this file.
-CNAME	This tiny file tells GitHub what your custom domain is (huyenvi.blog). Do not edit or delete this file.
-
-
-Part 5: How to Write and Publish a New Post
+Part 4: How to Write and Publish a New Post
 
 This is your most important daily workflow. Follow these steps every time you want to publish something new.
 
 Step 1 — Create the post file
 In VS Code, right-click on the _posts/ folder and choose New File. Name it in this exact format:
 
-File naming rule:
-YEAR-MONTH-DAY-title-of-your-post.markdown  Example: 2026-04-27-my-trip-to-hoi-an.markdown
+File naming rule: YEAR-MONTH-DAY-title-of-your-post.markdown  
+Example: 2026-04-27-my-trip-to-hoi-an.markdown
 
 Step 2 — Add the front matter
 Every post must start with these lines at the very top. This tells Jekyll the title, date and layout of your post:
@@ -98,40 +80,15 @@ Write your post content here...
 Step 3 — Write your content using Markdown
 Markdown is a simple way of writing that automatically turns into beautiful HTML. Here are the basics:
 
-What you type	What it becomes
-# Big Title	A large heading at the top
-## Smaller Title	A medium sized section heading
-**bold text**	Bold text
-*italic text*	Italic text
-[Click here](https://...)	A clickable link
-![Photo description](/assets/images/photo.jpg)	An image in your post
-- Item one	A bullet point list item
-
 Step 4 — Save and publish
 
-1	Save the file in VS Code
-Press ⌘ Cmd + S to save your post file
-2	Open Terminal
-Press Ctrl + ` inside VS Code, or open the Terminal app
-3	Run the 3 git commands
-git add .   then   git commit -m "new post"   then   git push ...
-4	Wait 2 minutes
-GitHub builds and publishes your site automatically
-5	Refresh huyenvi.blog
-Your post is now live for the whole world to read!
+1	Save the file in VS Code: Press ⌘ Cmd + S to save your post file
+2	Open Terminal: Press Ctrl + ` inside VS Code, or open the Terminal app
+3	Run the 3 git commands: git add .   then   git commit -m "new post"   then   git push ...
+4	Wait 2 minutes: GitHub builds and publishes your site automatically
+5	Refresh huyenvi.blog: Your post is now live for the whole world to read!
 
-
-Part 6: How to Add a Photo to a Post
-
-1	Copy your photo into the assets/images/ folder
-In VS Code, drag and drop your photo file into the assets/images/ folder on the left sidebar
-2	Add this line in your post where you want the photo to appear
-![Description of photo](/assets/images/your-photo-name.jpg)
-3	Save, then push to GitHub with the 3 commands
-Your photo will appear in the post on your live site
-
-
-Part 7: How to Change the Design of Your Website
+Part 6: How to Change the Design of Your Website
 
 Your site design is controlled by two files. Here is which file to edit depending on what you want to change:
 
@@ -146,26 +103,4 @@ Change your Now page	now.markdown
 💡 Important reminder
 After making any design change, always remember to save the file (⌘ Cmd + S) and then run the 3 git commands to push your changes to GitHub. Changes only go live after you push!
 
-
-Part 8: Quick Reference Card
-
-Keep this section handy. These are the things you will do most often:
-
-Every time you publish anything:
-
-git add .
-git commit -m "describe your change"
-git push https://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@github.com/huyentrang060996-glitch/huyenvi.github.io.git main
-
-Your important links:
-•	Your live website: huyenvi.blog
-•	Your GitHub repository: github.com/huyentrang060996-glitch/huyenvi.github.io
-•	Local preview (when server is running): http://localhost:4000
-
-Key things to remember:
-•	_config.yml changes require restarting the server (Ctrl+C then bundle exec jekyll serve)
-•	All other file changes update automatically when the server is running locally
-•	Changes only appear on huyenvi.blog after you push to GitHub
-•	Post files MUST be named: YYYY-MM-DD-title.markdown
-•	Every post MUST start with the front matter (the --- section)
 
