@@ -49,58 +49,7 @@ Why do we need GitHub?
 The 3 commands you run every time
 Every time you want your changes to go live, you run these 3 commands in Terminal. Think of them like packing and shipping a box:
 
-1	git add .
-"Pack up all the changes I made" — this collects everything you edited or created
-2	git commit -m "description"
-"Label the package" — write a short note about what you changed (e.g. new post, fix header)
-3	git push ...
-"Send the package to GitHub" — this uploads everything and your live website updates in 2 minutes
-
-
-Part 4: How to Write and Publish a New Post
-
-This is your most important daily workflow. Follow these steps every time you want to publish something new.
-
-Step 1 — Create the post file
-In VS Code, right-click on the _posts/ folder and choose New File. Name it in this exact format:
-
-File naming rule: YEAR-MONTH-DAY-title-of-your-post.markdown  
-Example: 2026-04-27-my-trip-to-hoi-an.markdown
-
-Step 2 — Add the front matter
-Every post must start with these lines at the very top. This tells Jekyll the title, date and layout of your post:
-
----
-layout: default
-title: "My trip to Hoi An"
-date: 2026-04-27
----
-Write your post content here...
-
-Step 3 — Write your content using Markdown
-Markdown is a simple way of writing that automatically turns into beautiful HTML. Here are the basics:
-
-Step 4 — Save and publish
-
-1	Save the file in VS Code: Press ⌘ Cmd + S to save your post file
-2	Open Terminal: Press Ctrl + ` inside VS Code, or open the Terminal app
-3	Run the 3 git commands: git add .   then   git commit -m "new post"   then   git push ...
-4	Wait 2 minutes: GitHub builds and publishes your site automatically
-5	Refresh huyenvi.blog: Your post is now live for the whole world to read!
-
-Part 6: How to Change the Design of Your Website
-
-Your site design is controlled by two files. Here is which file to edit depending on what you want to change:
-
-What you want to change	Which file to edit
-Colours, fonts, spacing, sizes	assets/css/style.css
-Add or remove nav links (About, Now)	_layouts/default.html
-Change the site title or description	_config.yml  (then restart server)
-Change your homepage text	index.markdown
-Change your About page	about.markdown
-Change your Now page	now.markdown
-
-💡 Important reminder
-After making any design change, always remember to save the file (⌘ Cmd + S) and then run the 3 git commands to push your changes to GitHub. Changes only go live after you push!
-
+1	git add .: "Pack up all the changes I made" — this collects everything you edited or created
+2	git commit -m "description": "Label the package" — write a short note about what you changed (e.g. new post, fix header)
+3	git push ...: "Send the package to GitHub" — this uploads everything and your live website updates in 2 minutes
 
